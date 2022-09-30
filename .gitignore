@@ -151,3 +151,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
