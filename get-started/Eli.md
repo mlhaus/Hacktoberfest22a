@@ -1,3 +1,3 @@
 # Hello Class!
 
-It's Eli. Hello Everyone!
+It's Elijah. Hello Everyone!
