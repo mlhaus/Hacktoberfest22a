@@ -27,4 +27,8 @@ class Map1Test {
         assertTrue(map4.containsKey("b"));
     }
 
+    void brendan_mapAB(){
+
+    }
+
 }

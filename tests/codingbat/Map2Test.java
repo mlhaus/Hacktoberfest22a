@@ -15,4 +15,8 @@ class Map2Test {
         String[] expected = {"caterpillar", "dog", "butterfly", "cat", "kitten", "kangaroo", "bunny", "centipede", "crocodile"};
         assertEquals(Arrays.toString(expected), Arrays.toString(actual));
     }
+
+    void brendan_wordLen(){
+
+    }
 }
