@@ -1,5 +1,6 @@
 package codingbat;
 
-class Map1Test {
+import org.junit.jupiter.api.Test;
 
+class Map1Test {
 }
