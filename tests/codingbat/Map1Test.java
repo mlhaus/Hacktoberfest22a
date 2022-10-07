@@ -2,13 +2,29 @@ package codingbat;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Map1Test {
+
+    @Test
+    void alex_topping3(){
+        Map<String, String> foodMapTest = new HashMap<>();
+        foodMapTest.put("potato", "salt");
+        foodMapTest.put("salad", "ham");
+        foodMapTest.put("sandwich", "pasta");
+        Map<String, String> foodMapTest2 = Map1.topping3(foodMapTest);
+
+        //get fries assert
+        assertEquals(foodMapTest2.get("fries"), foodMapTest.get("potato"));
+        assertEquals(foodMapTest2.get("spinach"), foodMapTest.get("salad"));
+        assertEquals(foodMapTest2.get("sandwich"), foodMapTest.get("sandwich"));
+    }
+
+
 
     @Test
     void marc_mapAB2() {
