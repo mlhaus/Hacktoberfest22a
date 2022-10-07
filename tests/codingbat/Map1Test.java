@@ -27,4 +27,17 @@ class Map1Test {
         assertTrue(map4.containsKey("b"));
     }
 
+    @Test
+    void garion_topping1(){
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("a", "ice cream");
+        map1.put("b", "cherry");
+        map1.put("c", "bread");
+        map1.put("d", "butter");
+        Map<String, String> map2 = Map1.mapAB2(map1);
+        assertTrue(map1.containsKey("a"));
+        assertTrue(map1.containsKey("b"));
+        assertTrue(map1.containsKey("c"));
+        assertTrue(map1.containsKey("d"));
+    }
 }
