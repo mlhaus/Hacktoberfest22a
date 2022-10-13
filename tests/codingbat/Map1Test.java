@@ -26,17 +26,5 @@ class Map1Test {
         assertTrue(map4.containsKey("a"));
         assertTrue(map4.containsKey("b"));
     }
-    @Test
-    void jacci_mapShare() {
-        Map<String, String> map1 = new HashMap<>();
-        map1.put("a", "aaa");
-        map1.put("b", "bbb");
-        map1.put("c", "ccc");
-        map1.put("d", "ddd");
-        Map<String, String> map2 = Map1.mapShare(map1);
-        assertFalse(map2.containsKey("c"));
-        assertTrue(map2.get("b").equals("aaa"));
-        assertTrue(map2.get("d").equals("ddd"));
-        assertTrue(map2.get("a").equals("aaa"));
-    }
+
 }
