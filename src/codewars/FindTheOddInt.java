@@ -1,6 +1,7 @@
 package codewars;
 import java.util.*;
 
+
 public class FindTheOddInt {
     public static int findIt(int[] a) {
         int odd = 0;
@@ -20,4 +21,7 @@ public class FindTheOddInt {
         return odd;
 
     }
+
 }
+
+
