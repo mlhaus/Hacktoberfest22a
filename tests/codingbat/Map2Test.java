@@ -31,5 +31,20 @@ class Map2Test {
         expected.put("strawberry",true);
         expected.put("durian",false);
         assertEquals(expected,actual);
+        
+    void brendan_wordLen(){
+        String[] strings = {"words", "are", "counted", "by", "chars"};
+
+        Map<String,Integer>expected = new HashMap<>();
+        expected.put("words",5);
+        expected.put("are",3);
+        expected.put("counted",7);
+        expected.put("by",2);
+        expected.put("chars",5);
+
+        Map<String, Integer> actual = Map2.wordLen(strings);
+
+        assertEquals(expected,actual);
+
     }
 }
