@@ -2,11 +2,11 @@ package codingbat;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Map1Test {
 
@@ -38,6 +38,7 @@ class Map1Test {
         assertTrue(map2.get("b").equals("aaa"));
         assertTrue(map2.get("d").equals("ddd"));
         assertTrue(map2.get("a").equals("aaa"));
+        //assertEquals(map1, map2);
     }
 
 }
