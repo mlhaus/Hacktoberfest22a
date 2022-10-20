@@ -1,5 +1,6 @@
 package codewars;
 
+
 public class SortTheOdd {
     public static int[] sortArray(int[] array) {
         for(int i=0; i<array.length; i++){

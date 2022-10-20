@@ -29,5 +29,6 @@ class Map2Test {
         assertTrue(expected.get("g").equals("greengold"));
         assertTrue(expected.get("y").equals("yellow"));
         assertEquals(expected, actual);
+
     }
 }

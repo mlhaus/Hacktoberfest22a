@@ -39,6 +39,7 @@ class Map1Test {
         assertTrue(map2.get("d").equals("ddd"));
         assertTrue(map2.get("a").equals("aaa"));
         //assertEquals(map1, map2);
+
     }
 
 }

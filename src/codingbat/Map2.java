@@ -134,6 +134,7 @@ public class Map2 {
      * this can be solved making just one pass over the array. More difficult
      * than it looks.
      */
+
     public static String[] allSwap(String[] strings) {
         Map<Character, Integer> map = new HashMap<>();
         for(int i = 0; i < strings.length; i++) {
