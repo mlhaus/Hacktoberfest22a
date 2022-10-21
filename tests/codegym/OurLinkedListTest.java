@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class OurLinkedListTest {
     private OurLinkedList<String> ourLinkedList;
+
     @BeforeEach
     void setUp() {
         ourLinkedList = new OurLinkedList<>();
@@ -27,29 +28,29 @@ class OurLinkedListTest {
     }
 
     @Test
-    void brendan_removeFirst(){
+    void brendan_removeFirst() {
         ourLinkedList.add("cat");
         ourLinkedList.add("dog");
         ourLinkedList.removeFirst();
-        assertEquals("dog",ourLinkedList.get(0));
+        assertEquals("dog", ourLinkedList.get(0));
     }
 
     @Test
-    void brendan_removeFirst2(){
+    void brendan_removeFirst2() {
         ourLinkedList.add("tiger");
         ourLinkedList.add("alligator");
         ourLinkedList.add("cheetah");
         ourLinkedList.removeFirst();
-        assertEquals("alligator",ourLinkedList.get(0));
+        assertEquals("alligator", ourLinkedList.get(0));
     }
 
     @Test
-    void brendan_removeFirst3(){
+    void brendan_removeFirst3() {
         ourLinkedList.add("tiger");
         ourLinkedList.add("alligator");
         ourLinkedList.add("cheetah");
         ourLinkedList.removeFirst();
         ourLinkedList.removeFirst();
-        assertEquals("cheetah",ourLinkedList.get(0));
+        assertEquals("cheetah", ourLinkedList.get(0));
     }
 }

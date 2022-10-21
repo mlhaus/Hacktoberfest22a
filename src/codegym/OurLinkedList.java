@@ -50,10 +50,11 @@ public class OurLinkedList<T> {
     }
 
     public T removeFirst(){
-        T removed = (T)first.value;
+        T removed = (T)first.next.value;
         first = first.next;
         return removed;
     }
+
 
     public static class Node<T> {
         private Node prev;
