@@ -53,4 +53,12 @@ class OurLinkedListTest {
         ourLinkedList.removeFirst();
         assertEquals("cheetah", ourLinkedList.get(0));
     }
+
+    @Test
+    void brendan_removeFirst4(){
+        ourLinkedList.add("tiger");
+        ourLinkedList.add("alligator");
+        ourLinkedList.add("cheetah");
+        assertEquals("tiger",ourLinkedList.removeFirst());
+    }
 }
