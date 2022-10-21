@@ -42,4 +42,14 @@ class OurLinkedListTest {
         ourLinkedList.removeFirst();
         assertEquals("alligator",ourLinkedList.get(0));
     }
+
+    @Test
+    void brendan_removeFirst3(){
+        ourLinkedList.add("tiger");
+        ourLinkedList.add("alligator");
+        ourLinkedList.add("cheetah");
+        ourLinkedList.removeFirst();
+        ourLinkedList.removeFirst();
+        assertEquals("cheetah",ourLinkedList.get(0));
+    }
 }
