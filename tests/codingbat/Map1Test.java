@@ -44,6 +44,19 @@ class Map1Test {
     }
 
     @Test
+    void parker_mapAB3() {
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("a", "apple");
+        map1.put("c", "crab");
+        Map<String, String> map2 = Map1.mapAB3(map1);
+        assertTrue(map2.containsKey("b"));
+        Map<String, String> map3 = new HashMap<>();
+        map1.put("b", "beef");
+        map1.put("c", "crab");
+        Map<String, String> map4 = Map1.mapAB3(map1);
+        assertTrue(map2.containsKey("a"));
+    }
+    @Test
     void garion_topping1(){
         Map<String, String> map1 = new HashMap<>();
         map1.put("a", "ice cream");
