@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class Map2Test {
 
@@ -28,6 +28,15 @@ class Map2Test {
         assertEquals(Arrays.toString(expected), Arrays.toString(actual));
     }
 
+    @Test
+    void garion_word0(){
+        String[] strings = {"a", "b", "a", "b", "c"};
+        Map<String, Integer> actual = Map2.word0(strings);
+        assertEquals(actual.get("a"), 0);
+        assertEquals(actual.get("b"), 0);
+        assertEquals(actual.get("c"), 0);
+    }
+    
     @Test
     void brendan_wordLen(){
         String[] strings = {"words", "are", "counted", "by", "chars"};
