@@ -43,6 +43,7 @@ class Map1Test {
 
     @Test
     void marc_mapAB2() {
+        Map<String, String> map1 = new HashMap<>();
         map1.put("a", "cat");
         map1.put("b", "cat");
         Map<String, String> map2 = Map1.mapAB2(map1);
