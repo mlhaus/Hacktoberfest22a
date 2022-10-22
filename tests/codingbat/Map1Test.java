@@ -86,12 +86,12 @@ class Map1Test {
 
         Map<String,String> map2 = new HashMap();
         map2.put("a","aaa");
-        map2.put("a","bbb");
+        map2.put("c","bbb");
 
         Map<String,String> actual2 = Map1.mapAB(map2);
         Map<String,String> expected2 = new HashMap();
         expected2.put("a","aaa");
-        expected2.put("a","bbb");
+        expected2.put("c","bbb");
 
         assertEquals(expected2,actual2);
     }
