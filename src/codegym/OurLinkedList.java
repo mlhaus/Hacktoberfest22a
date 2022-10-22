@@ -54,8 +54,7 @@ public class OurLinkedList<T> {
         first = first.next;
         return removed;
     }
-
-
+    
     public static class Node<T> {
         private Node prev;
         private T value;
