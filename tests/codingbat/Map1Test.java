@@ -55,7 +55,7 @@ class Map1Test {
         map1.put("c", "crab");
         Map<String, String> map4 = Map1.mapAB3(map1);
         assertTrue(map2.containsKey("a"));
-
+    }
     @Test
     void garion_topping1(){
         Map<String, String> map1 = new HashMap<>();
