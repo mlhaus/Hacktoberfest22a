@@ -83,5 +83,4 @@ class Map1Test {
         assertEquals(expected2,actual2);
     }
 
-
 }
