@@ -11,6 +11,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class Map1Test {
 
     @Test
+    void eli_topping2() {
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("ice cream", "cherry");
+        map1.put("spinach", "dressing");
+        Map<String, String> map2 = new HashMap<>();
+        map2 = Map1.topping2(map1);
+        assertEquals("cherry", map2.get("yogurt"));
+        assertEquals("nuts", map2.get("spinach"));
+        assertTrue(map2.get("ice cream").equals(map2.get("yogurt")));
+        assertFalse(map2.get("spinach").equals("dressing"));
+    }
+
+
+
+    @Test
     void alex_topping3(){
         Map<String, String> foodMapTest = new HashMap<>();
         foodMapTest.put("potato", "salt");
@@ -56,6 +71,7 @@ class Map1Test {
         Map<String, String> map4 = Map1.mapAB3(map1);
         assertTrue(map2.containsKey("a"));
     }
+    
     @Test
     void garion_topping1(){
         Map<String, String> map1 = new HashMap<>();
