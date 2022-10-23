@@ -56,11 +56,6 @@ public class OurLinkedList<T> {
     }
 
     public void addLast(T value) {
-        Node node = new Node();
-        node.value = value;
-        Node temp = last.prev;
-        temp.next = node;
-        last.prev = node;
-        node.prev = temp;
+        add(value);
     }
 }
