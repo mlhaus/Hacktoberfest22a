@@ -25,4 +25,14 @@ class OurLinkedListTest {
         assertEquals("Turtle", ourLinkedList.get(0));
         assertEquals("Cat", ourLinkedList.get(1));
     }
+
+    @Test
+    void parker_addLastTest1() {
+        ourLinkedList.addLast("Cat");
+        ourLinkedList.add(0, "Turtle");
+        assertEquals("Turtle", ourLinkedList.get(0));
+        assertEquals("Cat", ourLinkedList.get(1));
+        ourLinkedList.addLast("Japanese Crested Ibis");
+        assertEquals("Japanese Crested Ibis", ourLinkedList.get(2));
+    }
 }
