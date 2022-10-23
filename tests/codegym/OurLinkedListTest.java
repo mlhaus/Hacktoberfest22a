@@ -25,7 +25,6 @@ class OurLinkedListTest {
         assertEquals("Turtle", ourLinkedList.get(0));
         assertEquals("Cat", ourLinkedList.get(1));
     }
-
     @Test
     void parker_addLastTest1() {
         ourLinkedList.addLast("Cat");
@@ -35,4 +34,39 @@ class OurLinkedListTest {
         ourLinkedList.addLast("Japanese Crested Ibis");
         assertEquals("Japanese Crested Ibis", ourLinkedList.get(2));
     }
+    @Test
+    void brendan_removeFirst() {
+        ourLinkedList.add("cat");
+        ourLinkedList.add("dog");
+        ourLinkedList.removeFirst();
+        assertEquals("dog", ourLinkedList.get(0));
+    }
+
+    @Test
+    void brendan_removeFirst2() {
+        ourLinkedList.add("tiger");
+        ourLinkedList.add("alligator");
+        ourLinkedList.add("cheetah");
+        ourLinkedList.removeFirst();
+        assertEquals("alligator", ourLinkedList.get(0));
+    }
+
+    @Test
+    void brendan_removeFirst3() {
+        ourLinkedList.add("tiger");
+        ourLinkedList.add("alligator");
+        ourLinkedList.add("cheetah");
+        ourLinkedList.removeFirst();
+        ourLinkedList.removeFirst();
+        assertEquals("cheetah", ourLinkedList.get(0));
+    }
+
+    @Test
+    void brendan_removeFirst4(){
+        ourLinkedList.add("tiger");
+        ourLinkedList.add("alligator");
+        ourLinkedList.add("cheetah");
+        assertEquals("tiger",ourLinkedList.removeFirst());
+    }
+
 }
