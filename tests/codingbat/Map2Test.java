@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class Map2Test {
 
@@ -50,6 +49,9 @@ class Map2Test {
         assertTrue(expected.get("g").equals("greengold"));
         assertTrue(expected.get("y").equals("yellow"));
         assertEquals(expected, actual);
+    }
+
+    @Test
     void parker_wordMultiple() {
         String[] strings = {"apple","pear","pineapple","strawberry","apple","strawberry","durian"};
         Map<String, Boolean> actual = Map2.wordMultiple(strings);

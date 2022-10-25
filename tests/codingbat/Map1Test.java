@@ -2,7 +2,6 @@ package codingbat;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,6 +69,9 @@ class Map1Test {
         assertTrue(map2.get("d").equals("ddd"));
         assertTrue(map2.get("a").equals("aaa"));
         //assertEquals(map1, map2);
+    }
+
+    @Test
     void parker_mapAB3() {
         Map<String, String> map1 = new HashMap<>();
         map1.put("a", "apple");
