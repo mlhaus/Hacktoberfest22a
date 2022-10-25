@@ -2,7 +2,6 @@ package codingbat;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,6 +56,20 @@ class Map1Test {
         assertTrue(map4.containsKey("a"));
         assertTrue(map4.containsKey("b"));
     }
+    @Test
+    void jacci_mapShare() {
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("a", "aaa");
+        map1.put("b", "bbb");
+        map1.put("c", "ccc");
+        map1.put("d", "ddd");
+        Map<String, String> map2 = Map1.mapShare(map1);
+        assertFalse(map2.containsKey("c"));
+        assertTrue(map2.get("b").equals("aaa"));
+        assertTrue(map2.get("d").equals("ddd"));
+        assertTrue(map2.get("a").equals("aaa"));
+        //assertEquals(map1, map2);
+    }
 
     @Test
     void parker_mapAB3() {
@@ -109,7 +122,6 @@ class Map1Test {
         expected2.put("a","aaa");
         expected2.put("c","bbb");
 
-        assertEquals(expected2,actual2);
     }
 
 }
