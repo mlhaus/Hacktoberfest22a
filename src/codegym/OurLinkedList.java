@@ -59,6 +59,12 @@ public class OurLinkedList<T> {
         first.next = removed.next;
         return (T)removed.value;
     }
+    public T getFirst(){
+        // Jacci
+        Node firstOne = first.next;
+        first.next = firstOne.next;
+        return (T)firstOne.value;
+    }
     
     public static class Node<T> {
         private Node prev;

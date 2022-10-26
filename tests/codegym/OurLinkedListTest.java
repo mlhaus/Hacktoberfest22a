@@ -61,5 +61,12 @@ class OurLinkedListTest {
         ourLinkedList.add("cheetah");
         assertEquals("tiger",ourLinkedList.removeFirst());
     }
+    @Test
+    void jacci_getFirst(){
+        ourLinkedList.add("Jacci");
+        ourLinkedList.add("Tom");
+        ourLinkedList.add("Micah");
+        assertEquals("Jacci",ourLinkedList.getFirst());
+    }
 
 }
