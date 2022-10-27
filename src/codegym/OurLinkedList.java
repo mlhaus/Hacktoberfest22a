@@ -62,7 +62,7 @@ public class OurLinkedList<T> {
     public T getFirst(){
         // Jacci
         Node firstOne = first.next;
-        first.next = firstOne.next;
+//        first.next = firstOne.next;
         return (T)firstOne.value;
     }
     
