@@ -49,9 +49,31 @@ public class OurLinkedList<T> {
         return (T) currentElement.value;
     }
 
+    public T removeFirst(){
+        // Brendan
+//        T removed = (T)first.next.value;
+//        first = first.next;
+//        return removed;
+        // Marc
+        Node removed = first.next;
+        first.next = removed.next;
+        return (T)removed.value;
+    }
+    public T getFirst(){
+        // Jacci
+        Node firstOne = first.next;
+//        first.next = firstOne.next;
+        return (T)firstOne.value;
+    }
+    
     public static class Node<T> {
         private Node prev;
         private T value;
         private Node next;
+    }
+
+    public void addLast(T value) {
+        //parker
+        add(value);
     }
 }
