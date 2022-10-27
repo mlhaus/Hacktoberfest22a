@@ -3,7 +3,10 @@ package codegym;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.NoSuchElementException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class OurLinkedListTest {
     private OurLinkedList<String> ourLinkedList;
@@ -74,6 +77,18 @@ class OurLinkedListTest {
         ourLinkedList.add("Tom");
         ourLinkedList.add("Micah");
         assertEquals("Jacci",ourLinkedList.getFirst());
+    }
+
+    @Test
+    void marc_remove1() {
+        ourLinkedList.add("cat");
+        ourLinkedList.add(0, "dog");
+        assertEquals("dog", ourLinkedList.remove());
+    }
+
+    @Test
+    void marc_remove2() {
+        assertThrows(NoSuchElementException.class, () -> {ourLinkedList.remove();});
     }
 
 }
