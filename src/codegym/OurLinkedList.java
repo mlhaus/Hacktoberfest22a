@@ -1,6 +1,9 @@
 package codegym;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class OurLinkedList<T> {
     private Node first = new Node();
     private Node last = new Node();
@@ -18,6 +21,18 @@ public class OurLinkedList<T> {
         }
     }
 
+    public T pollFirst(){
+        if(first.next== last && last.prev == first) {
+            return null;
+        }else{
+            Node temp = first.next;
+            first.next = temp.next;
+            first.next.prev = first;
+            return (T) temp;
+        }
+    }
+
+
     public void add(T value) {
         Node node = new Node();
         node.value = value;
@@ -26,6 +41,7 @@ public class OurLinkedList<T> {
         last.prev = node;
         node.prev = temp;
     }
+
 
     public void add(int index, T value) {
         Node node = new Node();
@@ -54,4 +70,7 @@ public class OurLinkedList<T> {
         private T value;
         private Node next;
     }
+
+
+
 }
