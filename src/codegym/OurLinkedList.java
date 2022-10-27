@@ -71,4 +71,9 @@ public class OurLinkedList<T> {
         private T value;
         private Node next;
     }
+
+    public void addLast(T value) {
+        //parker
+        add(value);
+    }
 }
