@@ -11,13 +11,21 @@ import static org.junit.jupiter.api.Assertions.*;
 class Map2Test {
 
     @Test
+    void marc_allSwap() {
+        String[] strings = {"cat", "dog", "bunny", "caterpillar", "kangaroo", "kitten", "butterfly", "crocodile", "centipede"};
+        String[] actual = Map2.allSwap(strings);
+        String[] expected = {"caterpillar", "dog", "butterfly", "cat", "kitten", "kangaroo", "bunny", "centipede", "crocodile"};
+        assertEquals(Arrays.toString(expected), Arrays.toString(actual));
+    }
+
+    @Test
     void eli_wordAppend() {
         String[] string1 = new String[] {"a", "b", "a", "", "b"};
         String[] string2 = new String[] {"", "b", "a", "c", "c"};
+        String[] string3 = new String[] {"", "a", "b", "c"};
         assertEquals("ab", Map2.wordAppend(string1));
-        assertFalse(Map2.wordAppend(string1).equals(Map2.wordAppend(string2)));
+        assertTrue(Map2.wordAppend(string3).equals(""));
     }
-
 
     @Test
     void alex_wordCount(){
@@ -30,14 +38,6 @@ class Map2Test {
         assertEquals(testMap.get("greetings"), 1);
     }
 
-
-    @Test
-    void marc_allSwap() {
-        String[] strings = {"cat", "dog", "bunny", "caterpillar", "kangaroo", "kitten", "butterfly", "crocodile", "centipede"};
-        String[] actual = Map2.allSwap(strings);
-        String[] expected = {"caterpillar", "dog", "butterfly", "cat", "kitten", "kangaroo", "bunny", "centipede", "crocodile"};
-        assertEquals(Arrays.toString(expected), Arrays.toString(actual));
-    }
     @Test
     void jacci_firstChar() {
         String[] strings = {"red", "blue", "green", "brown", "gold", "rust", "yellow"};
@@ -74,7 +74,7 @@ class Map2Test {
         assertEquals(actual.get("b"), 0);
         assertEquals(actual.get("c"), 0);
     }
-    
+
     @Test
     void brendan_wordLen(){
         String[] strings = {"words", "are", "counted", "by", "chars"};

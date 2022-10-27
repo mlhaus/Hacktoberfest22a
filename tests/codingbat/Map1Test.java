@@ -10,37 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class Map1Test {
 
     @Test
-    void eli_topping2() {
-        Map<String, String> map1 = new HashMap<>();
-        map1.put("ice cream", "cherry");
-        map1.put("spinach", "dressing");
-        Map<String, String> map2 = new HashMap<>();
-        map2 = Map1.topping2(map1);
-        assertEquals("cherry", map2.get("yogurt"));
-        assertEquals("nuts", map2.get("spinach"));
-        assertTrue(map2.get("ice cream").equals(map2.get("yogurt")));
-        assertFalse(map2.get("spinach").equals("dressing"));
-    }
-
-
-
-    @Test
-    void alex_topping3(){
-        Map<String, String> foodMapTest = new HashMap<>();
-        foodMapTest.put("potato", "salt");
-        foodMapTest.put("salad", "ham");
-        foodMapTest.put("sandwich", "pasta");
-        Map<String, String> foodMapTest2 = Map1.topping3(foodMapTest);
-
-        //get fries assert
-        assertEquals(foodMapTest2.get("fries"), foodMapTest.get("potato"));
-        assertEquals(foodMapTest2.get("spinach"), foodMapTest.get("salad"));
-        assertEquals(foodMapTest2.get("sandwich"), foodMapTest.get("sandwich"));
-    }
-
-
-
-    @Test
     void marc_mapAB2() {
         Map<String, String> map1 = new HashMap<>();
         map1.put("a", "cat");
@@ -56,6 +25,34 @@ class Map1Test {
         assertTrue(map4.containsKey("a"));
         assertTrue(map4.containsKey("b"));
     }
+
+    @Test
+    void alex_topping3(){
+        Map<String, String> foodMapTest = new HashMap<>();
+        foodMapTest.put("potato", "salt");
+        foodMapTest.put("salad", "ham");
+        foodMapTest.put("sandwich", "pasta");
+        Map<String, String> foodMapTest2 = Map1.topping3(foodMapTest);
+
+        //get fries assert
+        assertEquals(foodMapTest2.get("fries"), foodMapTest.get("potato"));
+        assertEquals(foodMapTest2.get("spinach"), foodMapTest.get("salad"));
+        assertEquals(foodMapTest2.get("sandwich"), foodMapTest.get("sandwich"));
+    }
+
+    @Test
+    void eli_topping2() {
+        Map<String, String> map1 = new HashMap<>();
+        map1.put("ice cream", "cherry");
+        map1.put("spinach", "dressing");
+        Map<String, String> map2 = new HashMap<>();
+        map2 = Map1.topping2(map1);
+        assertEquals("cherry", map2.get("yogurt"));
+        assertEquals("nuts", map2.get("spinach"));
+        assertTrue(map2.get("ice cream").equals(map2.get("yogurt")));
+        assertFalse(map2.get("spinach").equals("dressing"));
+    }
+    
     @Test
     void jacci_mapShare() {
         Map<String, String> map1 = new HashMap<>();
