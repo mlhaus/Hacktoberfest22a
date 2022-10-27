@@ -76,4 +76,27 @@ class OurLinkedListTest {
         assertEquals("Jacci",ourLinkedList.getFirst());
     }
 
+    @Test
+    void eli_indexOf1() {
+        ourLinkedList.add("Chicken Wings");
+        ourLinkedList.add("Pizza");
+        ourLinkedList.add("Fries");
+        assertEquals(2,ourLinkedList.indexOf("Fries"));
+    }
+
+    @Test
+    void eli_indexOf2() {
+        ourLinkedList.add("Chicken Wings");
+        ourLinkedList.add("Pizza");
+        ourLinkedList.add("Fries");
+        assertEquals(1,ourLinkedList.indexOf("Pizza"));
+    }
+
+    @Test
+    void eli_indexOf3() {
+        ourLinkedList.add("Chicken Wings");
+        ourLinkedList.add("Pizza");
+        ourLinkedList.add("Fries");
+        assertEquals(-1,ourLinkedList.indexOf("CheeseBurger"));
+    }
 }

@@ -76,4 +76,20 @@ public class OurLinkedList<T> {
         //parker
         add(value);
     }
+
+    public int indexOf(T input) {
+        // Eli
+        Node currentElement = first.next;
+        int count = 0;
+        while ((currentElement) != null) {
+
+            if (currentElement.value == input) {
+                return count;
+            }
+            count++;
+            currentElement = currentElement.next;
+        }
+        //System.out.println(count);
+        return -1;
+    }
 }
