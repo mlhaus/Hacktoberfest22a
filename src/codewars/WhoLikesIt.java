@@ -1,3 +1,4 @@
+package codewars;
 class Solution {
     public static String whoLikesIt(String... names) {
         final int len = names.length;
