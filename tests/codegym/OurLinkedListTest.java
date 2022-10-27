@@ -82,4 +82,17 @@ class OurLinkedListTest {
     void jacci_getFirst2(){
         assertThrows(NoSuchElementException.class, () -> {ourLinkedList.getFirst();});
     }
+
+    @Test
+    void marc_remove1() {
+        ourLinkedList.add("cat");
+        ourLinkedList.add(0, "dog");
+        assertEquals("dog", ourLinkedList.remove());
+    }
+
+    @Test
+    void marc_remove2() {
+        assertThrows(NoSuchElementException.class, () -> {ourLinkedList.remove();});
+    }
+
 }
