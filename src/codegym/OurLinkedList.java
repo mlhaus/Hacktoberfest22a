@@ -1,8 +1,8 @@
 package codegym;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class OurLinkedList<T> {
     private Node first = new Node();
@@ -40,6 +40,7 @@ public class OurLinkedList<T> {
         temp.next = node;
         last.prev = node;
         node.prev = temp;
+        node.next = last;
     }
 
 
@@ -65,6 +66,23 @@ public class OurLinkedList<T> {
         return (T) currentElement.value;
     }
 
+    public T removeFirst(){
+        // Brendan
+//        T removed = (T)first.next.value;
+//        first = first.next;
+//        return removed;
+        // Marc
+        Node removed = first.next;
+        first.next = removed.next;
+        return (T)removed.value;
+    }
+    public T getFirst(){
+        // Jacci
+        Node firstOne = first.next;
+//        first.next = firstOne.next;
+        return (T)firstOne.value;
+    }
+    
     public static class Node<T> {
         private Node prev;
         private T value;
@@ -72,5 +90,19 @@ public class OurLinkedList<T> {
     }
 
 
+    public void addLast(T value) {
+        //parker
+        add(value);
+    }
 
+    public T remove() {
+        if(first.next == last && last.prev == first) {
+            throw new NoSuchElementException("No object to remove");
+        }
+        Node nodeToRemove = first.next;
+        first.next = nodeToRemove.next;
+        nodeToRemove.next = nodeToRemove.prev;
+        return (T)nodeToRemove.value;
+    }
+    
 }
