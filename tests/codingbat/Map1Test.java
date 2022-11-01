@@ -43,20 +43,6 @@ class Map1Test {
     }
 
     @Test
-    void alex_topping3(){
-        Map<String, String> foodMapTest = new HashMap<>();
-        foodMapTest.put("potato", "salt");
-        foodMapTest.put("salad", "ham");
-        foodMapTest.put("sandwich", "pasta");
-        Map<String, String> foodMapTest2 = Map1.topping3(foodMapTest);
-
-        //get fries assert
-        assertEquals(foodMapTest2.get("fries"), foodMapTest.get("potato"));
-        assertEquals(foodMapTest2.get("spinach"), foodMapTest.get("salad"));
-        assertEquals(foodMapTest2.get("sandwich"), foodMapTest.get("sandwich"));
-    }
-
-    @Test
     void eli_topping2() {
         Map<String, String> map1 = new HashMap<>();
         map1.put("ice cream", "cherry");
