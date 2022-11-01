@@ -1,5 +1,8 @@
 package codegym;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 public class OurLinkedList<T> {
     private Node first = new Node();
@@ -18,6 +21,19 @@ public class OurLinkedList<T> {
         }
     }
 
+
+    public T pollFirst(){
+        if(first.next== last && last.prev == first) {
+            return null;
+        }else{
+            Node temp = first.next;
+            first.next = temp.next;
+            first.next.prev = first;
+            return (T) temp;
+        }
+    }
+
+
     public void add(T value) {
         Node node = new Node();
         node.value = value;
@@ -25,7 +41,9 @@ public class OurLinkedList<T> {
         temp.next = node;
         last.prev = node;
         node.prev = temp;
+        node.next = last;
     }
+
 
     public void add(int index, T value) {
         Node node = new Node();
@@ -49,9 +67,47 @@ public class OurLinkedList<T> {
         return (T) currentElement.value;
     }
 
+    public T removeFirst(){
+        // Brendan
+//        T removed = (T)first.next.value;
+//        first = first.next;
+//        return removed;
+        // Marc
+        Node removed = first.next;
+        first.next = removed.next;
+        return (T)removed.value;
+    }
+    
+    public T getFirst(){
+        // Jacci
+        Node firstOne = first.next;
+        if (first.next == last){
+            throw new NoSuchElementException();
+        }
+        return (T)firstOne.value;
+    }
+    
+
     public static class Node<T> {
         private Node prev;
         private T value;
         private Node next;
     }
+
+
+    public void addLast(T value) {
+        //parker
+        add(value);
+    }
+
+    public T remove() {
+        if(first.next == last && last.prev == first) {
+            throw new NoSuchElementException("No object to remove");
+        }
+        Node nodeToRemove = first.next;
+        first.next = nodeToRemove.next;
+        nodeToRemove.next = nodeToRemove.prev;
+        return (T)nodeToRemove.value;
+    }
+    
 }
