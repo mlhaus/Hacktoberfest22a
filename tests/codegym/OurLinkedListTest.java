@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class OurLinkedListTest {
@@ -28,6 +29,19 @@ class OurLinkedListTest {
         assertEquals("Turtle", ourLinkedList.get(0));
         assertEquals("Cat", ourLinkedList.get(1));
     }
+
+    @Test
+    void alex_pollFirst(){
+        ourLinkedList.add("Cat");
+        ourLinkedList.add("Dog");
+        ourLinkedList.add("Bird");
+        ourLinkedList.add("Fish");
+        ourLinkedList.add("Mouse");
+        assertTrue(ourLinkedList.pollFirst()!=null);
+        ourLinkedList.pollFirst();
+
+    }
+
     @Test
     void parker_addLastTest1() {
         ourLinkedList.addLast("Cat");

@@ -1,6 +1,7 @@
 package codegym;
 
-
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.NoSuchElementException;
 
 public class OurLinkedList<T> {
@@ -20,6 +21,18 @@ public class OurLinkedList<T> {
         }
     }
 
+    public T pollFirst(){
+        if(first.next== last && last.prev == first) {
+            return null;
+        }else{
+            Node temp = first.next;
+            first.next = temp.next;
+            first.next.prev = first;
+            return (T) temp;
+        }
+    }
+
+
     public void add(T value) {
         Node node = new Node();
         node.value = value;
@@ -29,6 +42,7 @@ public class OurLinkedList<T> {
         node.prev = temp;
         node.next = last;
     }
+
 
     public void add(int index, T value) {
         Node node = new Node();
@@ -75,6 +89,7 @@ public class OurLinkedList<T> {
         private Node next;
     }
 
+
     public void addLast(T value) {
         //parker
         add(value);
@@ -89,5 +104,5 @@ public class OurLinkedList<T> {
         nodeToRemove.next = nodeToRemove.prev;
         return (T)nodeToRemove.value;
     }
-
+    
 }

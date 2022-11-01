@@ -10,6 +10,22 @@ import static org.junit.jupiter.api.Assertions.*;
 class Map1Test {
 
     @Test
+    void alex_topping3(){
+        Map<String, String> foodMapTest = new HashMap<>();
+        foodMapTest.put("potato", "salt");
+        foodMapTest.put("salad", "ham");
+        foodMapTest.put("sandwich", "pasta");
+        Map<String, String> foodMapTest2 = Map1.topping3(foodMapTest);
+
+        //get fries assert
+        assertEquals(foodMapTest2.get("fries"), foodMapTest.get("potato"));
+        assertEquals(foodMapTest2.get("spinach"), foodMapTest.get("salad"));
+        assertEquals(foodMapTest2.get("sandwich"), foodMapTest.get("sandwich"));
+    }
+
+
+
+    @Test
     void marc_mapAB2() {
         Map<String, String> map1 = new HashMap<>();
         map1.put("a", "cat");
@@ -24,20 +40,6 @@ class Map1Test {
         Map<String, String> map4 = Map1.mapAB2(map3);
         assertTrue(map4.containsKey("a"));
         assertTrue(map4.containsKey("b"));
-    }
-
-    @Test
-    void alex_topping3(){
-        Map<String, String> foodMapTest = new HashMap<>();
-        foodMapTest.put("potato", "salt");
-        foodMapTest.put("salad", "ham");
-        foodMapTest.put("sandwich", "pasta");
-        Map<String, String> foodMapTest2 = Map1.topping3(foodMapTest);
-
-        //get fries assert
-        assertEquals(foodMapTest2.get("fries"), foodMapTest.get("potato"));
-        assertEquals(foodMapTest2.get("spinach"), foodMapTest.get("salad"));
-        assertEquals(foodMapTest2.get("sandwich"), foodMapTest.get("sandwich"));
     }
 
     @Test

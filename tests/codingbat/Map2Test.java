@@ -11,6 +11,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class Map2Test {
 
     @Test
+    void alex_wordCount(){
+        String[] newString = {"hello", "hello", "hi", "greetings", "hi", "hello"};
+
+        Map<String, Integer> testMap = new HashMap<String, Integer>();
+        testMap = Map2.wordCount(newString);
+        assertEquals(testMap.get("hello"), 3);
+        assertEquals(testMap.get("hi"), 2);
+        assertEquals(testMap.get("greetings"), 1);
+    }
+
+
+    @Test
     void marc_allSwap() {
         String[] strings = {"cat", "dog", "bunny", "caterpillar", "kangaroo", "kitten", "butterfly", "crocodile", "centipede"};
         String[] actual = Map2.allSwap(strings);
@@ -25,17 +37,6 @@ class Map2Test {
         String[] string3 = new String[] {"", "a", "b", "c"};
         assertEquals("ab", Map2.wordAppend(string1));
         assertTrue(Map2.wordAppend(string3).equals(""));
-    }
-
-    @Test
-    void alex_wordCount(){
-        String[] newString = {"hello", "hello", "hi", "greetings", "hi", "hello"};
-
-        Map<String, Integer> testMap = new HashMap<String, Integer>();
-        testMap = Map2.wordCount(newString);
-        assertEquals(testMap.get("hello"), 3);
-        assertEquals(testMap.get("hi"), 2);
-        assertEquals(testMap.get("greetings"), 1);
     }
 
     @Test
