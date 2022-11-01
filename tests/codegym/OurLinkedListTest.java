@@ -92,6 +92,10 @@ class OurLinkedListTest {
         ourLinkedList.add("Micah");
         assertEquals("Jacci",ourLinkedList.getFirst());
     }
+    @Test
+    void jacci_getFirst2(){
+        assertThrows(NoSuchElementException.class, () -> {ourLinkedList.getFirst();});
+    }
 
     @Test
     void marc_remove1() {
