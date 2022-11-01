@@ -79,7 +79,9 @@ public class OurLinkedList<T> {
     public T getFirst(){
         // Jacci
         Node firstOne = first.next;
-//        first.next = firstOne.next;
+        if (first.next == last){
+            throw new NoSuchElementException();
+        }
         return (T)firstOne.value;
     }
     
