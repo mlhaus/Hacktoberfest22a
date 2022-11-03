@@ -97,6 +97,7 @@ class OurLinkedListTest {
         ourLinkedList.add("Pizza");
         ourLinkedList.add("Fries");
         assertEquals(2,ourLinkedList.indexOf("Fries"));
+
     }
 
     @Test
