@@ -4,7 +4,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -51,6 +50,7 @@ class OurLinkedListTest {
         ourLinkedList.addLast("Japanese Crested Ibis");
         assertEquals("Japanese Crested Ibis", ourLinkedList.get(2));
     }
+    
     @Test
     void brendan_removeFirst() {
         ourLinkedList.add("cat");

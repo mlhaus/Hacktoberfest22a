@@ -21,6 +21,7 @@ public class OurLinkedList<T> {
         }
     }
 
+
     public T pollFirst(){
         if(first.next== last && last.prev == first) {
             return null;
@@ -76,6 +77,7 @@ public class OurLinkedList<T> {
         first.next = removed.next;
         return (T)removed.value;
     }
+    
     public T getFirst(){
         // Jacci
         Node firstOne = first.next;
@@ -85,6 +87,7 @@ public class OurLinkedList<T> {
         return (T)firstOne.value;
     }
     
+
     public static class Node<T> {
         private Node prev;
         private T value;
