@@ -93,7 +93,20 @@ class Map2Test {
     }
 
     @Test
-    void joey_firstSwap(){
+    void joey_pairs(){
+        String[] strings = {"Iowa", "Colorado", "Kansas", "Kentucky", "Vermont", "Virginia", "Georgia"};
+        Map<String, String> expected = new HashMap<>();
+        expected.put("I", "a");
+        expected.put("C", "o");
+        expected.put("K", "s");
+        expected.put("K", "y");
+        expected.put("V", "t");
+        expected.put("V", "a");
+        expected.put("G", "a");
+
+        Map<String, String> actual = Map2.pairs(strings);
+
+        assertEquals(expected, actual);
 
     }
 }
