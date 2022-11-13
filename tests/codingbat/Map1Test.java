@@ -120,7 +120,31 @@ class Map1Test {
         Map<String,String> expected2 = new HashMap();
         expected2.put("a","aaa");
         expected2.put("c","bbb");
+    }
 
+    @Test
+    void joey_mapBully(){
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "Duck");
+        map.put("b", "Goose");
+
+        Map<String, String> actual1 = new HashMap<>(Map1.mapBully(map));
+        Map<String, String> expected1 = new HashMap<>(Map1.mapBully(map));
+        expected1.put("a", "");
+        expected1.put("b", "Duck");
+
+        assertEquals(expected1, actual1);
+
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("a", "Dog");
+        map2.put("b", "Cat");
+
+        Map<String, String> actual2 = new HashMap<>(Map1.mapBully(map2));
+        Map<String, String> expected2 = new HashMap<>(Map1.mapBully(map2));
+        expected2.put("a", "");
+        expected2.put("b", "Dog");
+
+        assertEquals(expected2, actual2);
     }
 
 }
