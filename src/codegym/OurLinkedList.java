@@ -84,6 +84,18 @@ public class OurLinkedList<T> {
         }
         return (T)firstOne.value;
     }
+
+    public T getLast(){
+        // Nick
+
+        while (first.next != null)
+        {
+            last = first.next;
+            first = first.next;
+        }
+
+        return (T)last.value;
+    }
     
     public static class Node<T> {
         private Node prev;

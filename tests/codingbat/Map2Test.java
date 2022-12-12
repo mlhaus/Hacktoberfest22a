@@ -109,4 +109,11 @@ class Map2Test {
         assertEquals(expected, actual);
 
     }
+    @Test
+    void nick_firstSwap(){
+        String[] strings = {"apple", "banana", "orange", "lemon", "lime"};
+        String[] actual = Map2.allSwap(strings);
+        String[] expected = {"apple", "banana", "orange", "lime", "lemon"};
+        assertEquals(Arrays.toString(expected), Arrays.toString(actual));
+    }
 }
