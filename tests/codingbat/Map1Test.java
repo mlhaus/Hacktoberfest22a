@@ -146,5 +146,33 @@ class Map1Test {
 
         assertEquals(expected2, actual2);
     }
+    @Test
+    void nick_mapAB4(){
+        Map<String, String> map = new HashMap<>();
+        map.put("a", "aaa");
+        map.put("b", "bbb");
+        map.put("c", "cc");
+
+        Map<String, String> actual1 = new HashMap<>(Map1.mapAB4(map));
+        Map<String, String> expected1 = new HashMap<>();
+        expected1.put("a", "");
+        expected1.put("b", "");
+        expected1.put("c", "cc");
+
+        assertEquals(expected1, actual1);
+
+        Map<String, String> map2 = new HashMap<>();
+        map2.put("a", "a");
+        map2.put("b", "bbb");
+        map2.put("c", "");
+
+        Map<String, String> actual2 = new HashMap<>(Map1.mapBully(map2));
+        Map<String, String> expected2 = new HashMap<>();
+        expected2.put("a", "a");
+        expected2.put("b", "bbb");
+        expected2.put("c", "bbb");
+
+        assertEquals(expected2, actual2);
+    }
 
 }
